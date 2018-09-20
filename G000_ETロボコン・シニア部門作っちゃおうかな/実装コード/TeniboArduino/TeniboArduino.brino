@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BrInoProject>
+  <!-- Arduinoボードの種類 UNO|nano328|nano328p -->
+  <!-- 省略時は buildenv.xml のBoardの指定を使用します -->
+  <!-- 指定可能なボードを以下に示します -->
+  <!-- uno     Arduino Uno-->
+  <!-- nano328 Arduino Nano w/ ATmega328 -->
+  <Board>nano328</Board>
+  <!-- Arduinoボードを接続しているポート番号 -->
+  <ComPort>COM9</ComPort>
+  <!-- BricRoboの利用した部品のソースリストファイル -->
+  <SourceFileList>TeniboArduino.SourceFileList.xml</SourceFileList>
+  <!-- 追加でコンパルするソースの指定 -->
+  <Source>RTE\BricRoboCOM_API.cpp</Source>
+  <Source>RTE\BricRoboRTE_API.cpp</Source>
+  <Source>RTE\BricRoboRTE_Model.cpp</Source>
+  <Source>RTE\BricRoboRTE_Task.cpp</Source>
+  <!-- 追加でインクルードするフォルダ -->
+  <IncludeDir>.</IncludeDir>
+  <!-- BricRoboRTEが使用するライブラリの指定 -->
+  <Library>BricRobo</Library>
+  <Library>MsTimer2</Library>
+  <Library>MicroView</Library>
+  <Library>I2Cdev</Library>
+  <Library>MPU6050</Library>
+  <LibraryDir>C:\Program Files (x86)\Arduino\hardware\arduino\avr\libraries</LibraryDir>
+  <Library>Wire</Library>
+  <Library>Servo</Library>
+  <Library>SoftwareSerial</Library>
+  <!-- コンパイル時の中間ファイルを出力するディレクトリ -->
+  <BuildDir>Build</BuildDir>
+</BrInoProject>

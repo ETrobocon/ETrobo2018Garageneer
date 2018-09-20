@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TeniboArduino.brino" />
+    <None Include="TeniboArduino.mak" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\BricRoboSketch\DigitalOut.cpp" />
+    <ClCompile Include="..\Common\Parts\LedDriver\LedDriver.cpp" />
+    <ClCompile Include="..\Common\Parts\ServoMotor\ServoMotor.cpp" />
+    <ClCompile Include="Parts\AccelBuffer.cpp" />
+    <ClCompile Include="Parts\Telecom.cpp" />
+    <ClCompile Include="Parts\TeniboArduinControlller.cpp" />
+    <ClCompile Include="Parts\VoltSensor.cpp" />
+    <ClCompile Include="RTE\BricRoboCOM_API.cpp" />
+    <ClCompile Include="RTE\BricRoboRTE_API.cpp" />
+    <ClCompile Include="RTE\BricRoboRTE_Model.cpp" />
+    <ClCompile Include="RTE\BricRoboRTE_Task.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="TeniboArduino.SourceFileList.xml" />
+    <Xml Include="TeniboArduino.SourceFileList.xml.xsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\TeniboCommon\TeniboComMagic.h" />
+    <ClInclude Include="..\TeniboCommon\TeniboCommandIF.h" />
+    <ClInclude Include="..\TeniboCommon\TeniboNaviIF.h" />
+    <ClInclude Include="Parts\AccelBuffer.h" />
+    <ClInclude Include="Parts\RobotMode.h" />
+    <ClInclude Include="Parts\Telecom.h" />
+    <ClInclude Include="Parts\TeniboArduinControlller.h" />
+    <ClInclude Include="Parts\VoltSensor.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="TeniboArduino.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{80970879-C081-413B-B5FF-0B39FCFF3E17}</ProjectGuid>
+    <Keyword>MakeFileProj</Keyword>
+    <ProjectName>TeniboArduino</ProjectName>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <NMakeBuildCommandLine>BrIno TeniboArduino.brino all</NMakeBuildCommandLine>
+    <NMakeOutput>BricRoboSketchV100.exe</NMakeOutput>
+    <NMakePreprocessorDefinitions>_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeReBuildCommandLine>BrIno TeniboArduino.brino upload</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>BrIno TeniboArduino.brino clean</NMakeCleanCommandLine>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <NMakeBuildCommandLine>BrIno TeniboArduino.brino all</NMakeBuildCommandLine>
+    <NMakeOutput>BricRoboSketchV100.exe</NMakeOutput>
+    <NMakePreprocessorDefinitions>_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeReBuildCommandLine>BrIno TeniboArduino.brino upload</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>BrIno TeniboArduino.brino clean</NMakeCleanCommandLine>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

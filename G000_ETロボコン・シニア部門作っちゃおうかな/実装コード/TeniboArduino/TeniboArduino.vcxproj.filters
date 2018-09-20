@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Parts\Telecom.cpp" />
+    <ClCompile Include="Parts\TeniboArduinControlller.cpp" />
+    <ClCompile Include="Parts\VoltSensor.cpp" />
+    <ClCompile Include="RTE\BricRoboCOM_API.cpp" />
+    <ClCompile Include="RTE\BricRoboRTE_API.cpp" />
+    <ClCompile Include="RTE\BricRoboRTE_Model.cpp" />
+    <ClCompile Include="RTE\BricRoboRTE_Task.cpp" />
+    <ClCompile Include="..\BricRoboSketch\DigitalOut.cpp">
+      <Filter>再利用</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Parts\ServoMotor\ServoMotor.cpp">
+      <Filter>再利用</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Parts\LedDriver\LedDriver.cpp">
+      <Filter>再利用</Filter>
+    </ClCompile>
+    <ClCompile Include="Parts\AccelBuffer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\TeniboCommon\TeniboComMagic.h" />
+    <ClInclude Include="..\TeniboCommon\TeniboCommandIF.h" />
+    <ClInclude Include="..\TeniboCommon\TeniboNaviIF.h" />
+    <ClInclude Include="Parts\RobotMode.h" />
+    <ClInclude Include="Parts\Telecom.h" />
+    <ClInclude Include="Parts\TeniboArduinControlller.h" />
+    <ClInclude Include="Parts\VoltSensor.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="TeniboArduino.h" />
+    <ClInclude Include="Parts\AccelBuffer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="TeniboArduino.SourceFileList.xml" />
+    <Xml Include="TeniboArduino.SourceFileList.xml.xsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TeniboArduino.brino" />
+    <None Include="TeniboArduino.mak" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="再利用">
+      <UniqueIdentifier>{0d22e3cc-524a-4d77-9227-ad400caeeab2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
