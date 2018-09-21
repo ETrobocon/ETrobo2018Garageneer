@@ -1,14 +1,14 @@
-# コンポーネントの解説
+# パッケージの解説
 
 * BricRoboSketch：Arduinoの入出力をBricRobo部品で用意した汎用ライブラリ
-* Common：過去に開発したすべてのモジュールで共通に使える部品
-* JellyFish：水中ロボット「クラゲちゃん」で開発した部品、一部を利用
+* Common：過去に開発したすべてのモジュールで共通に使える部品ライブラリ
+* JellyFish：水中ロボット「クラゲちゃん」で開発したソフト、一部を利用
 * TeniboArduino：Arduinoに乗せるソフト、C++で開発
-* TeniboCommon：Tenibo用の共通部品
-* TeniboPropo：プロポ側ソフト、大人の事情により非公開
+* TeniboCommon：Tenibo用の共通部品ライブラリ
+* TeniboPropo：プロポ側ソフト、大人の事情により非公開（Android版はXamarin、Windows版は.NET）
 * TeniboRaspi：Raspberry piに乗せるソフト、C#で開発、linuxのmonoで動かす
 
-すべてBricRoboで開発しているので、手組みのC++やC#っぽい構造ではないです。
+TeniboPropo以外はすべてBricRoboで開発しているので、手組みのC++やC#っぽい構造ではないです。
 開発環境はBricRobo＋Visual Studio 2017で、Arduino上ではBrInoを使ってVisual Studio 2017で開発しています。
 
   
