@@ -12,7 +12,7 @@
 開発環境はBricRobo＋Visual Studio 2017で、Arduino上ではBrInoを使ってVisual Studio 2017で開発しています。
 
   
-[BricRobo](http://www.fujitsu.com/jp/group/fct/products/bricrobo/)
-
-[BrIno](http://www.fujitsu.com/jp/group/fct/products/bricrobo/downloads/)
+* [BricRobo](http://www.fujitsu.com/jp/group/fct/products/bricrobo/)
+* [BrIno](http://www.fujitsu.com/jp/group/fct/products/bricrobo/downloads/)
+* [クラゲちゃん開発日誌](https://www.facebook.com/media/set/?set=a.974927242581414&type=1&l=f7beeeab7b)
 
