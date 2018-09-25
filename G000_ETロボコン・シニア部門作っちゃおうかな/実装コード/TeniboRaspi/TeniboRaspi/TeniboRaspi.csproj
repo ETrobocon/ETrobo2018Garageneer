@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\packages\OpenCvSharp3-AnyCPU.3.4.1.20180319\build\OpenCvSharp3-AnyCPU.props" Condition="Exists('..\..\packages\OpenCvSharp3-AnyCPU.3.4.1.20180319\build\OpenCvSharp3-AnyCPU.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C0552BC0-4520-42E6-866A-52007664C802}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>TeniboRaspi</RootNamespace>
+    <AssemblyName>TeniboRaspi</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;WINDEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="OpenCvSharp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6adad1e807fea099, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\OpenCvSharp3-AnyCPU.3.4.1.20180319\lib\net40\OpenCvSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenCvSharp.Blob, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6adad1e807fea099, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\OpenCvSharp3-AnyCPU.3.4.1.20180319\lib\net40\OpenCvSharp.Blob.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenCvSharp.UserInterface, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6adad1e807fea099, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\OpenCvSharp3-AnyCPU.3.4.1.20180319\lib\net40\OpenCvSharp.UserInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\Common\EventIF.local.cs">
+      <Link>Common\EventIF.local.cs</Link>
+    </Compile>
+    <Compile Include="..\..\TeniboCommon\TeniboComMagic.local.cs">
+      <Link>TeniboCommon\TeniboComMagic.local.cs</Link>
+    </Compile>
+    <Compile Include="..\..\TeniboCommon\TeniboCommandIF.cs">
+      <Link>TeniboCommon\TeniboCommandIF.cs</Link>
+    </Compile>
+    <Compile Include="..\..\TeniboCommon\TeniboCommandIF.local.cs">
+      <Link>TeniboCommon\TeniboCommandIF.local.cs</Link>
+    </Compile>
+    <Compile Include="..\..\TeniboCommon\TeniboCommnd.local.cs">
+      <Link>TeniboCommon\TeniboCommnd.local.cs</Link>
+    </Compile>
+    <Compile Include="..\..\TeniboCommon\TeniboNaviIF.cs">
+      <Link>TeniboCommon\TeniboNaviIF.cs</Link>
+    </Compile>
+    <Compile Include="..\..\TeniboCommon\TeniboNaviIF.local.cs">
+      <Link>TeniboCommon\TeniboNaviIF.local.cs</Link>
+    </Compile>
+    <Compile Include="..\..\TeniboCommon\TeniboStatus.local.cs">
+      <Link>TeniboCommon\TeniboStatus.local.cs</Link>
+    </Compile>
+    <Compile Include="..\Parts\AutoPilot.local.cs">
+      <Link>Parts\AutoPilot.local.cs</Link>
+    </Compile>
+    <Compile Include="..\Parts\BallPosition.cs">
+      <Link>Parts\BallPosition.cs</Link>
+    </Compile>
+    <Compile Include="..\Parts\BallPosition.local.cs">
+      <Link>Parts\BallPosition.local.cs</Link>
+    </Compile>
+    <Compile Include="..\Parts\BallPositionIF.local.cs">
+      <Link>Parts\BallPositionIF.local.cs</Link>
+    </Compile>
+    <Compile Include="..\Parts\ControlCom.cs">
+      <Link>Parts\ControlCom.cs</Link>
+    </Compile>
+    <Compile Include="..\Parts\ControlCom.local.cs">
+      <Link>Parts\ControlCom.local.cs</Link>
+    </Compile>
+    <Compile Include="..\Parts\ControlSwitcher.cs">
+      <Link>Parts\ControlSwitcher.cs</Link>
+    </Compile>
+    <Compile Include="..\Parts\ControlSwitcher.local.cs">
+      <Link>Parts\ControlSwitcher.local.cs</Link>
+    </Compile>
+    <Compile Include="..\Parts\DebugControlCom.cs">
+      <Link>Parts\DebugControlCom.cs</Link>
+    </Compile>
+    <Compile Include="..\Parts\DebugControlCom.local.cs">
+      <Link>Parts\DebugControlCom.local.cs</Link>
+    </Compile>
+    <Compile Include="..\Parts\Drive2Command.cs">
+      <Link>Parts\Drive2Command.cs</Link>
+    </Compile>
+    <Compile Include="..\Parts\Drive2Command.local.cs">
+      <Link>Parts\Drive2Command.local.cs</Link>
+    </Compile>
+    <Compile Include="..\Parts\DriveInfoIF.local.cs">
+      <Link>Parts\DriveInfoIF.local.cs</Link>
+    </Compile>
+    <Compile Include="..\Parts\Driving.cs">
+      <Link>Parts\Driving.cs</Link>
+    </Compile>
+    <Compile Include="..\Parts\Driving.local.cs">
+      <Link>Parts\Driving.local.cs</Link>
+    </Compile>
+    <Compile Include="..\Parts\ImageFrameIF.local.cs">
+      <Link>Parts\ImageFrameIF.local.cs</Link>
+    </Compile>
+    <Compile Include="..\Parts\ObstacleAvoidance.cs">
+      <Link>Parts\ObstacleAvoidance.cs</Link>
+    </Compile>
+    <Compile Include="..\Parts\ObstacleAvoidance.local.cs">
+      <Link>Parts\ObstacleAvoidance.local.cs</Link>
+    </Compile>
+    <Compile Include="..\Parts\PrioritySelector.cs">
+      <Link>Parts\PrioritySelector.cs</Link>
+    </Compile>
+    <Compile Include="..\Parts\PrioritySelector.local.cs">
+      <Link>Parts\PrioritySelector.local.cs</Link>
+    </Compile>
+    <Compile Include="..\Parts\RaspiWorks.cs">
+      <Link>Parts\RaspiWorks.cs</Link>
+    </Compile>
+    <Compile Include="..\Parts\RaspiWorks.local.cs">
+      <Link>Parts\RaspiWorks.local.cs</Link>
+    </Compile>
+    <Compile Include="..\Parts\SpeechIF.local.cs">
+      <Link>Parts\SpeechIF.local.cs</Link>
+    </Compile>
+    <Compile Include="..\Parts\SpeechMan.cs">
+      <Link>Parts\SpeechMan.cs</Link>
+    </Compile>
+    <Compile Include="..\Parts\SpeechMan.local.cs">
+      <Link>Parts\SpeechMan.local.cs</Link>
+    </Compile>
+    <Compile Include="..\Parts\Telecom.cs">
+      <Link>Parts\Telecom.cs</Link>
+    </Compile>
+    <Compile Include="..\Parts\Telecom.local.cs">
+      <Link>Parts\Telecom.local.cs</Link>
+    </Compile>
+    <Compile Include="..\Parts\UndistortCam.cs">
+      <Link>Parts\UndistortCam.cs</Link>
+    </Compile>
+    <Compile Include="..\Parts\UndistortCam.local.cs">
+      <Link>Parts\UndistortCam.local.cs</Link>
+    </Compile>
+    <Compile Include="..\Parts\UndistortCamera.cs">
+      <Link>Parts\UndistortCamera.cs</Link>
+    </Compile>
+    <Compile Include="..\Parts\VideoCamera.cs">
+      <Link>Parts\VideoCamera.cs</Link>
+    </Compile>
+    <Compile Include="..\Parts\VideoCamera.local.cs">
+      <Link>Parts\VideoCamera.local.cs</Link>
+    </Compile>
+    <Compile Include="..\RTE\BricRoboCOM_API.cs">
+      <Link>RTE\BricRoboCOM_API.cs</Link>
+    </Compile>
+    <Compile Include="..\RTE\BricRoboCOM_API.local.cs">
+      <Link>RTE\BricRoboCOM_API.local.cs</Link>
+    </Compile>
+    <Compile Include="..\RTE\BricRoboRTE_API.cs">
+      <Link>RTE\BricRoboRTE_API.cs</Link>
+    </Compile>
+    <Compile Include="..\RTE\BricRoboRTE_API.local.cs">
+      <Link>RTE\BricRoboRTE_API.local.cs</Link>
+    </Compile>
+    <Compile Include="..\RTE\BricRoboRTE_Model.cs">
+      <Link>RTE\BricRoboRTE_Model.cs</Link>
+    </Compile>
+    <Compile Include="..\RTE\BricRoboRTE_Model.local.cs">
+      <Link>RTE\BricRoboRTE_Model.local.cs</Link>
+    </Compile>
+    <Compile Include="..\RTE\BricRoboRTE_Task.cs">
+      <Link>RTE\BricRoboRTE_Task.cs</Link>
+    </Compile>
+    <Compile Include="..\TeniboRaspiApp.local.cs">
+      <Link>TeniboRaspiApp.local.cs</Link>
+    </Compile>
+    <Compile Include="BricRoboRTE\TeniboBricRoboController.cs" />
+    <Compile Include="BricRoboRTE\BricRoboTask.cs" />
+    <Compile Include="BricRoboRTE\MicroLibrary.cs" />
+    <Compile Include="BricRoboRTE\Std_Return_type.cs" />
+    <Compile Include="Parts\DigitalMap.cs" />
+    <Compile Include="Parts\PerspectiveLocation.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>このプロジェクトは、このコンピューター上にない NuGet パッケージを参照しています。それらのパッケージをダウンロードするには、[NuGet パッケージの復元] を使用します。詳細については、http://go.microsoft.com/fwlink/?LinkID=322105 を参照してください。見つからないファイルは {0} です。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\packages\OpenCvSharp3-AnyCPU.3.4.1.20180319\build\OpenCvSharp3-AnyCPU.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\OpenCvSharp3-AnyCPU.3.4.1.20180319\build\OpenCvSharp3-AnyCPU.props'))" />
+  </Target>
+</Project>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="shift_jis"?>
+<SourceFileList>
+  <Source>..\TeniboArduino\Parts\AccelBuffer.cpp</Source>
+  <Source>..\Common\Parts\LedDriver\LedDriver.cpp</Source>
+  <Source>..\TeniboArduino\Parts\TeniboArduinControlller.cpp</Source>
+  <Source>..\TeniboArduino\Parts\Telecom.cpp</Source>
+  <Source>..\JellyFish\Parts\XC10A\XC10A.cpp</Source>
+  <Source>..\BricRoboSketch\DigitalOut.cpp</Source>
+  <Source>..\TeniboArduino\Parts\VoltSensor.cpp</Source>
+</SourceFileList>
