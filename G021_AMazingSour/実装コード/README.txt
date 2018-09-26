@@ -1,0 +1,2 @@
+catkin_ws\src\ShoesTranspoterPkg\src内にソースコードを格納.
+他は自動生成のヘッダファイルとMakeファイル.
