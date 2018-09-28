@@ -1,0 +1,59 @@
+  switch(m){
+      case 0://teisi
+      CH1_val = CH2_val = CH3_val = CH4_val = 0;
+      Serial.print("晴");
+      Serial.print("\n");
+      break;
+
+      case 1://kaiten
+      CH1_val = CH2_val = CH3_val = CH4_val = 80;
+      Serial.print("雨");
+      Serial.print("\n");
+      break;
+
+
+  }
+
+
+
+#include <Wire.h>
+char motor_pow[5] = {0,0,0,0,0}; //モーター出力用
+
+void setup(){
+	Wire.begin(); // join i2c bus
+}
+
+void loop(){
+	Motor(0, 100);
+ delay(200);
+ Motor(0, -100);
+ delay(200);
+}
+
+//------------------------------------------------------------
+//ダイセン6chモーターコントロールボード
+//モーターnumは0～5
+//入力valは-100~100 0でストップ 999でブレーキ
+void Motor(int num, int val){
+	int mot;
+
+	if(val < 0 && val >= -100){
+	val = abs(val);
+	motor_pow[num] = val + 128;
+	}else if(val >= 0 && val <= 100){
+	motor_pow[num] = val;
+	}else if(val == 999){
+	motor_pow[num] = 128;
+	}else{
+	return;
+	}
+
+	Wire.beginTransmission(0x14>>1);
+	Wire.send(motor_pow[0]); // 1ch
+	Wire.send(motor_pow[1]); // 2ch
+	Wire.send(motor_pow[2]); // 3ch
+	Wire.send(motor_pow[3]); // 4ch
+	Wire.send(motor_pow[4]); // 5ch
+	Wire.send(motor_pow[5]); // 6ch
+	Wire.endTransmission();
+}
